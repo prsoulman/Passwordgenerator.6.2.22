@@ -1,14 +1,33 @@
-window.alert("Would you like to create a password");
-console.log([0])
+//character variables
+var specialChars = ["!","@","#","$","%","^","&","*"];
+var numberChars = ["1","2","3","4","5","6","7","8","9"];
+var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","S","T","U","V","W","X","Y","Z"];
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","s","t","u","v","w","x","y","z"];
+var allChars = [specialChars, numberChars, upperCase, lowerCase];
+var 
+// checking arrays for errors
+console.log(specialChars);
+console.log(numberChars);
+console.log(upperCase);
+console.log(lowerCase);
+console.log(allChars);
+
+//initial prompts
+//prompt for the length of the password from 8-128
+//prompt for boolean of lowercase uppercase numeric and special characters
+
+
+
+//randomizing password variable
+var randomPassword = {
+    math.floor(math.random() *//user input variable from prompt)
+}
 
 
 // create variables to hold chars option (special, number Uppercase, Lowercase)
 
 
-//   var specialChars = ["!","@","#","$","%","^","&","*"];
-//   var NumberChars = Array["1","2","3","4","5","6","7","8","9"];
-//   var Uppercase = true;
-//   var Lowercase = true;
+
 
 //   var allOptions = array(specialChars, NumberChars, Uppercase, Lowercase);
 
