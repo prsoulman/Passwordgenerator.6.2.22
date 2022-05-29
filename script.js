@@ -1,3 +1,5 @@
+document.querySelector("#generate").addEventListener("click", writePassword);
+
 //character variables
 var specialChars = ["!","@","#","$","%","^","&","*"];
 var numberChars = ["1","2","3","4","5","6","7","8","9"];
@@ -10,6 +12,8 @@ yesNo = ["yes", "no"];
 eightto128 = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 ,33 ,34 ,35 ,36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94 , 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128];
 
 
+function writePassword() {
+
 //User Prompt Variables
 var passwordValidation = confirm("Do you want to create a password Today?");
 // var passNumb = confirm("Do you want numbers in your password?");
@@ -18,11 +22,11 @@ var passwordValidation = confirm("Do you want to create a password Today?");
 // var passSpecial = confirm("Do you want any special characters?");
 //var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
 //checking arrays for errors
-window.console.log(specialChars);
-window.console.log(numberChars);
-window.console.log(upperCase);
-window.console.log(lowerCase);
-window.console.log(allChars);
+// window.console.log(specialChars);
+// window.console.log(numberChars);
+// window.console.log(upperCase);
+// window.console.log(lowerCase);
+// window.console.log(allChars);
 
 
 var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
@@ -31,6 +35,7 @@ if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
     }
 console.log(passLength);
 //Empty array to put the value of generated password.
+
 var generatedPass = [];
 
 //randomizing Number password variable
@@ -64,16 +69,11 @@ var passLower = confirm("Do you want lower case letters?");
 //Password generator using Boolean values from above
 var randomPass = "";
  for (var i = 0; i < passLength; i++) {
-     generatedPass[
+     generatedPass*[
          Math.floor(Math.random() * generatedPass.length)];
-     randomPassword +=
-        generatedPass[
-            Math.floor(Math.random() * generatedPass.length)
-        ];
+        console.log(randomPass);
     }
-   
-
-generateBtn.addEventListener("click", writePassword);
+}
 
 
 
@@ -111,7 +111,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+
 
 // Write password to the #password input
 // // function writePassword(allOptions) {
@@ -128,4 +128,3 @@ var generateBtn = document.querySelector("#generate");
 // // }
 
 // Addeventlistener to generate button
-generateBtn.addEventListener("click", writePassword);
