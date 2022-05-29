@@ -31,48 +31,49 @@ var passwordValidation = confirm("Do you want to create a password Today?");
 
 var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
 if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
-    alert ("Error. Choice is not valid. Please try again.");
+    alert ("I said...8 to 128 characters!");
     }
 console.log(passLength);
 //Empty array to put the value of generated password.
 
-var generatedPass = [];
+var characterChoice = [];
 
 //randomizing Number password variable
 var passNumb = confirm("Do you want numbers in your password?");
     if (passNumb === true) {
         for (var i = 0; i < numberChars.length; i++); {
-            generatedPass.push(numberChars[i]);
+            characterChoice.push(numberChars[i]);
         }
     }
 //randomizing Special Chars password variable
 var passSpecial = confirm("Do you want any special characters?");
     if (passSpecial === true) {
         for (var i = 0; i < specialChars.length; i++); {
-            generatedPass.push(specialChars[i]);
+            characterChoice.push(specialChars[i]);
         }
     }
 // Upper case pass Boolean
 var passUpper = confirm("Do you want upper case letters?");
     if (passUpper === true) {
         for (var i = 0; i < passUpper.length; i++) {
-            generatedPass.push(upperCase[i]);
+            characterChoice.push(upperCase[i]);
         }
     }
 // Lower case pass Boolean
 var passLower = confirm("Do you want lower case letters?");
     if (passLower === true) {
     for (var i = 0; i < passUpper.length; i++) {
-        generatedPass.push(lowerCase[i]);
+        characterChoice.push(lowerCase[i]);
     }
 }
 //Password generator using Boolean values from above
 var randomPass = "";
  for (var i = 0; i < passLength; i++) {
-     generatedPass*[
-         Math.floor(Math.random() * generatedPass.length)];
-        console.log(randomPass);
+     passLength*[
+         Math.floor(Math.random() * characterChoice.length)];
     }
+    console.log(randomPass);
+return;
 }
 
 
