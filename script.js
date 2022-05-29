@@ -17,19 +17,70 @@ var passUpper = confirm("Do you want upper case letters?");
 var passLower = confirm("Do you want lower case letters?");
 var passSpecial = confirm("Do you want any special characters?");
 var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
-// checking arrays for errors
+//checking arrays for errors
 window.console.log(specialChars);
 window.console.log(numberChars);
 window.console.log(upperCase);
 window.console.log(lowerCase);
 window.console.log(allChars);
 
-//randomizing password variable
-// var randomPassword = {
-//     math.floor(math.random(allChars.length) * passLength);
 
-// };
-// console.log(randomPassword);
+function pLength() {
+
+var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
+if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
+    alert ("Error. Choice is not valid. Please try again.");
+    return;
+    }
+}
+console.log(passLength);
+//Empty array to put the value of generated password.
+var generatedPass = [];
+
+//randomizing Number password variable
+var passNumb = confirm("Do you want numbers in your password?");
+    if (passNumb === true) {
+        for (var i = 0; i < numberChars.length; i++) {
+            generatedPass.push(numberChars[i]);
+        }
+    console.log(passNumb);
+    }
+//randomizing Special Chars password variable
+var passSpecial = confirm("Do you want any special characters?");
+    if (passSpecial === true) {
+        for (var i = 0; i < specialChar.length; i++) {
+            generatedPass.push(specialChars[i]);
+        }
+    }
+// Upper case pass Boolean
+var passUpper = confirm("Do you want upper case letters?");
+    if (passUpper === true) {
+        for (var i = 0; i < passUpper.length; i++) {
+            generatedPass.push(upperCase[i]);
+        }
+    }
+// Lower case pass Boolean
+var passLower = confirm("Do you want lower case letters?");
+    if (passLower === true) {
+    for (var i = 0; i < passUpper.length; i++) {
+        generatedPass.push(lowerCase[i]);
+    }
+}
+//Password generator using Boolean values from above
+var randomPass = "";
+ for (var i = 0; i < passLength; i++) {
+     generatedPass[
+         Math.floor(Math.random() * generatedPass.length)];
+     randomPassword +=
+        generatedPass[
+            Math.floor(Math.random() * generatedPass.length)
+        ];
+    }
+   
+
+generateBtn.addEventListener("click", writePassword);
+
+
 
 //initial prompts
 //prompt for the length of the password from 8-128
@@ -64,10 +115,10 @@ window.console.log(allChars);
 
 
 
-// // Assignment Code
-// var generateBtn = document.querySelector("#generate");
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
-// // // Write password to the #password input
+// Write password to the #password input
 // // function writePassword(allOptions) {
 // //   var password = generatePassword() {
 // //     return: Math,floor(Math.random() * max);
@@ -81,8 +132,8 @@ window.console.log(allChars);
 
 // // }
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// Addeventlistener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 // function getRandomInt(specialChars) {
