@@ -16,7 +16,7 @@ var passwordValidation = confirm("Do you want to create a password Today?");
 // var passUpper = confirm("Do you want upper case letters?");
 // var passLower = confirm("Do you want lower case letters?");
 // var passSpecial = confirm("Do you want any special characters?");
-var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
+//var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
 //checking arrays for errors
 window.console.log(specialChars);
 window.console.log(numberChars);
@@ -25,14 +25,10 @@ window.console.log(lowerCase);
 window.console.log(allChars);
 
 
-function pLength() {
-
 var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
 if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
     alert ("Error. Choice is not valid. Please try again.");
-    return;
     }
-}
 console.log(passLength);
 //Empty array to put the value of generated password.
 var generatedPass = [];
