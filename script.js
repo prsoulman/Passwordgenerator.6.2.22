@@ -12,10 +12,10 @@ eightto128 = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
 
 //User Prompt Variables
 var passwordValidation = confirm("Do you want to create a password Today?");
-var passNumb = confirm("Do you want numbers in your password?");
-var passUpper = confirm("Do you want upper case letters?");
-var passLower = confirm("Do you want lower case letters?");
-var passSpecial = confirm("Do you want any special characters?");
+// var passNumb = confirm("Do you want numbers in your password?");
+// var passUpper = confirm("Do you want upper case letters?");
+// var passLower = confirm("Do you want lower case letters?");
+// var passSpecial = confirm("Do you want any special characters?");
 var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
 //checking arrays for errors
 window.console.log(specialChars);
@@ -40,15 +40,14 @@ var generatedPass = [];
 //randomizing Number password variable
 var passNumb = confirm("Do you want numbers in your password?");
     if (passNumb === true) {
-        for (var i = 0; i < numberChars.length; i++) {
+        for (var i = 0; i < numberChars.length; i++); {
             generatedPass.push(numberChars[i]);
         }
-    console.log(passNumb);
     }
 //randomizing Special Chars password variable
 var passSpecial = confirm("Do you want any special characters?");
     if (passSpecial === true) {
-        for (var i = 0; i < specialChar.length; i++) {
+        for (var i = 0; i < specialChars.length; i++); {
             generatedPass.push(specialChars[i]);
         }
     }
@@ -134,9 +133,3 @@ var generateBtn = document.querySelector("#generate");
 
 // Addeventlistener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-// function getRandomInt(specialChars) {
-//   return Math.floor(Math.random() * max);
-// }
-// console.log(getRandomInt);
