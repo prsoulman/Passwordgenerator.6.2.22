@@ -11,11 +11,11 @@ eightto128 = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
 
 
 //User Prompt Variables
-var passwordValidation = window.prompt("Do you want to create a password Today?")
-var passNumb = window.prompt("Do you want numbers in your password?");
-var passUpper = window.prompt("Do you want upper case letters?");
-var passLower = window.prompt("Do you want lower case letters?")
-var passSpecial = window.prompt("Do you want any special characters?");
+var passwordValidation = confirm("Do you want to create a password Today?");
+var passNumb = confirm("Do you want numbers in your password?");
+var passUpper = confirm("Do you want upper case letters?");
+var passLower = confirm("Do you want lower case letters?");
+var passSpecial = confirm("Do you want any special characters?");
 var passLength = window.prompt("How long would you like the Password to be from 8 to 128 characters?");
 // checking arrays for errors
 window.console.log(specialChars);
