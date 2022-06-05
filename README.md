@@ -1,5 +1,8 @@
 # Passwordgenerator.6.2.22
-This is the password generator through alerts it gathers four options (upper case, lower case, special characters and Numbers). It takes these boolean values and passes these arrays through a function that creates randomly organized characters. 
+This is the password generator through alerts it gathers four options 
+(upper case, lower case, special characters and Numbers). It takes these 
+boolean values and passes these arrays through a function that creates 
+randomly organized characters. That can be then copy and pasted 
 
 **Links**
 
